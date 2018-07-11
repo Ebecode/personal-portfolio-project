@@ -33,7 +33,7 @@ body, html {
 }
 
 #navbar a:hover {
-	background-color: #444;
+	background-color: #287F4D;
 }
 
 /*Welcome section*/
@@ -70,7 +70,7 @@ section {
 	padding: 30px;
 }
 section h2 {
-	color: #fff;
+	color: #04FF6C;
 }
 
 /*About*/
@@ -83,6 +83,8 @@ section h2 {
 #about .skill {
 	background-color: #666;
 	padding: 1em;
+	color: #eee;
+	text-align: justify;
 }
 
 #skills {
@@ -92,11 +94,18 @@ section h2 {
 	grid-area: 1/3/2/5;
 }
 #info {
-	grid-area: 2/1/3/4;
+	grid-area: 2/1/3/5;
 }
-#img {
-	grid-area: 2/4/3/5;
+
+#profile-link {
+	max-width: 300px;
+	min-width: 100px;
+	text-align: center;
+	background-color: #555;
+	border-radius: 5px;
+	margin-left: auto;
 }
+
 
 /*Projects*/
 #project-box {
@@ -109,6 +118,13 @@ section h2 {
 .project-tile {
 	background-color: #666;
 }
+.empty {
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+	background-color: #ccc;
+	border: 3px solid #111;
+}
 
 /*Footer*/
 footer {
@@ -116,13 +132,25 @@ footer {
 	color: #ddd;
 	padding: 1em;
 	font-family: sans-serif;
+	max-height: 80px;
 }
-footer .container {
+#contact {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
+	align-items: center;
 }
-.container a {
+#contact > * {
+	max-width: 20%;
+}
+.container a, #profile-link {
 	display: block;
-	color: #fff;
+	color: #04FF6C;
 	text-decoration: none;
+	padding: 10px 40px;
 }
+.container a:hover, #profile-link:hover {
+	color: #111;
+	background-color: #04FF6C;
+	border-radius: 5px;
+}
+
