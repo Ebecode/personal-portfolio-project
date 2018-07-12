@@ -125,6 +125,13 @@ section h2 {
 	background-color: #ccc;
 	border: 3px solid #111;
 }
+#project-link {
+	max-width: 200px;
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
 
 /*Footer*/
 footer {
@@ -142,15 +149,35 @@ footer {
 #contact > * {
 	max-width: 20%;
 }
-.container a, #profile-link {
+.container a, #profile-link, #project-link {
 	display: block;
 	color: #04FF6C;
 	text-decoration: none;
 	padding: 10px 40px;
 }
-.container a:hover, #profile-link:hover {
+.container a:hover, #profile-link:hover, #project-link:hover {
 	color: #111;
 	background-color: #04FF6C;
 	border-radius: 5px;
 }
 
+/*Media query*/
+@media(max-width: 768px){
+	#project-box {
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+	}
+	#about-box {
+		display: flex;
+		flex-direction: column;
+
+	}
+	#about-box > div {
+		margin-bottom: 10px;
+	}
+
+	#contact {
+		flex-direction: column;
+		max-height: 400px;
+	}
+}
